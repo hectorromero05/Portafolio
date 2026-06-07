@@ -46,7 +46,7 @@ export default function App() {
 
       <section className="projects" id="proyectos">
         <p className="section-label">Portafolio</p>
-        <h2>Plantillas listas para negocios reales</h2>
+        <h2>Ejemplos para negocios reales</h2>
         <p className="projects-intro">
           Cada demo está pensada para un tipo de negocio específico: diseño, estructura,
           colores, secciones y llamados a la acción adaptados a lo que ese cliente necesita.
