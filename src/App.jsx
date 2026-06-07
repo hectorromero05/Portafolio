@@ -38,7 +38,7 @@ export default function App() {
         <h2>Diseño web claro, funcional y accesible</h2>
         <p>
           Soy Héctor Romero, estudiante de Física en la Universidad de
-          Guadalajara y desarrollador web independiente. Ayudo a pequeños
+          Guadalajara y desarrollador web independiente. Ayudo a los
           negocios a tener presencia profesional en internet mediante páginas
           modernas, rápidas y fáciles de compartir.
         </p>
@@ -46,35 +46,46 @@ export default function App() {
 
       <section className="projects" id="proyectos">
         <p className="section-label">Portafolio</p>
-        <h2>Proyectos de demostración</h2>
-
-        <div className="project-grid">
-          <Project
+        <h2>Plantillas listas para negocios reales</h2>
+        <p className="projects-intro">
+          Cada demo está pensada para un tipo de negocio específico: diseño, estructura,
+          colores, secciones y llamados a la acción adaptados a lo que ese cliente necesita.
+          </p>
+          <div className="project-showcase">
+            <Project
             title="Orange Gym"
             category="Gimnasio"
-            text="Landing page para gimnasio con secciones de planes, beneficios, ubicación y contacto."
+            img="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop"
+            text="Landing page para gimnasios con planes, beneficios, ubicación, horarios y botón directo a WhatsApp."
             link="https://orange-gym-web.vercel.app"
-          />
-          <Project
-            title="Sabor Local"
-            category="Restaurante"
-            text="Página para restaurante con menú visual, galería, opiniones, mapa y WhatsApp."
-            link="https://restaurante-web.vercel.app"
-          />
-          <Project
-            title="Café Aroma"
-            category="Cafetería"
-            text="Plantilla premium para cafetería con productos destacados, galería y ambiente visual."
-            link="#"
-          />
-          <Project
-            title="Clínica Vital"
-            category="Consultorio"
-            text="Página profesional para consultorio con servicios, especialista, ubicación y citas."
-            link="#"
-          />
-        </div>
-      </section>
+            />
+
+            
+    <Project
+      title="Sabor Local"
+      category="Restaurante"
+      img="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1200&auto=format&fit=crop"
+      text="Página visual para restaurantes con menú, galería, reseñas, mapa y llamadas directas para pedir por WhatsApp."
+      link="https://restaurante-web-neon.vercel.app/"
+    />
+
+    <Project
+      title="Café Aroma"
+      category="Cafetería"
+      img="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=1200&auto=format&fit=crop"
+      text="Plantilla cálida y estética para cafeterías, panaderías o coffee shops con productos destacados y galería."
+      link="https://cafeteria-web-iota.vercel.app/"
+    />
+
+    <Project
+      title="Clínica Vital"
+      category="Consultorio"
+      img="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?q=80&w=1200&auto=format&fit=crop"
+      text="Sitio profesional para consultorios con servicios, perfil del especialista, ubicación y botón para agendar cita."
+      link="https://consultorio-web-sable.vercel.app/"
+    />
+  </div>
+</section>
 
       <section className="services" id="servicios">
         <p className="section-label">Servicios</p>
@@ -150,13 +161,23 @@ export default function App() {
   );
 }
 
-function Project({ title, category, text, link }) {
+function Project({ title, category, text, link, img }) {
   return (
     <div className="project-card">
-      <span>{category}</span>
-      <h3>{title}</h3>
-      <p>{text}</p>
-      <a href={link} target="_blank">Ver demo</a>
+      <div className="project-image">
+        <img src={img} alt={title} />
+      </div>
+
+      <div className="project-content">
+        <span>{category}</span>
+        <h3>{title}</h3>
+        <p>{text}</p>
+
+        <div className="project-actions">
+          <a href={link} target="_blank">Ver demo</a>
+          <small>Diseño responsive · WhatsApp · Maps</small>
+        </div>
+      </div>
     </div>
   );
 }
