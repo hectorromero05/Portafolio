@@ -1,149 +1,186 @@
 import "./App.css";
 
 export default function App() {
-  const whatsapp = "https://wa.me/523330000000";
+  const whatsapp = "https://wa.me/523332187199";
 
   return (
     <div className="app">
       <nav className="navbar">
-        <h2>Sabor Local</h2>
+        <h2>Héctor Web Studio</h2>
         <div>
-          <a href="#menu">Menú</a>
-          <a href="#galeria">Galería</a>
-          <a href="#ubicacion">Ubicación</a>
-          <a href={whatsapp} target="_blank">Pedir</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#servicios">Servicios</a>
+          <a href="#precios">Precios</a>
+          <a href={whatsapp} target="_blank">Contacto</a>
         </div>
       </nav>
 
       <header className="hero">
         <div className="hero-content">
-          <span>Promos disponibles hoy</span>
-          <h1>Comida deliciosa, rápida y hecha con cariño</h1>
-          <p>Platillos frescos, porciones generosas y servicio para llevar.</p>
+          <span>Páginas web para negocios locales</span>
+          <h1>Diseño páginas modernas para que tu negocio venda más</h1>
+          <p>
+            Landing pages rápidas, profesionales y adaptadas a celular para
+            gimnasios, restaurantes, cafeterías, consultorios y negocios locales.
+          </p>
+
           <div className="hero-buttons">
-            <a href={whatsapp} target="_blank">Pedir por WhatsApp</a>
-            <a href="#menu" className="secondary">Ver menú</a>
+            <a href="#proyectos">Ver proyectos</a>
+            <a href={whatsapp} target="_blank" className="secondary">
+              Cotizar por WhatsApp
+            </a>
           </div>
         </div>
       </header>
 
-      <section className="info">
-        <div className="card">
-          <h3>📍 Ubicación</h3>
-          <p>Agrega aquí la dirección del negocio</p>
-        </div>
-        <div className="card">
-          <h3>🕒 Horario</h3>
-          <p>Lunes a domingo · 12:00 PM - 10:00 PM</p>
-        </div>
-        <div className="card">
-          <h3>📞 Contacto</h3>
-          <p>333 000 0000</p>
-        </div>
+      <section className="about">
+        <p className="section-label">Sobre mí</p>
+        <h2>Diseño web claro, funcional y accesible</h2>
+        <p>
+          Soy Héctor Romero, estudiante de Física en la Universidad de
+          Guadalajara y desarrollador web independiente. Ayudo a pequeños
+          negocios a tener presencia profesional en internet mediante páginas
+          modernas, rápidas y fáciles de compartir.
+        </p>
       </section>
 
-      <section className="menu" id="menu">
-        <p className="section-label">Menú</p>
-        <h2>Lo favorito de la casa</h2>
+      <section className="projects" id="proyectos">
+        <p className="section-label">Portafolio</p>
+        <h2>Proyectos de demostración</h2>
 
-        <div className="menu-grid">
-          <FoodCard
-            img="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=800&auto=format&fit=crop"
-            title="Hamburguesa BBQ"
-            desc="Carne jugosa, queso, tocino, papas y bebida."
-            price="$149"
+        <div className="project-grid">
+          <Project
+            title="Orange Gym"
+            category="Gimnasio"
+            text="Landing page para gimnasio con secciones de planes, beneficios, ubicación y contacto."
+            link="https://orange-gym-web.vercel.app"
           />
-          <FoodCard
-            img="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=800&auto=format&fit=crop"
-            title="Tacos Especiales"
-            desc="Orden de tacos con salsa de la casa."
-            price="$99"
+          <Project
+            title="Sabor Local"
+            category="Restaurante"
+            text="Página para restaurante con menú visual, galería, opiniones, mapa y WhatsApp."
+            link="https://restaurante-web.vercel.app"
           />
-          <FoodCard
-            img="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=800&auto=format&fit=crop"
-            title="Combo Familiar"
-            desc="Ideal para compartir entre 3 o 4 personas."
-            price="$299"
+          <Project
+            title="Café Aroma"
+            category="Cafetería"
+            text="Plantilla premium para cafetería con productos destacados, galería y ambiente visual."
+            link="#"
+          />
+          <Project
+            title="Clínica Vital"
+            category="Consultorio"
+            text="Página profesional para consultorio con servicios, especialista, ubicación y citas."
+            link="#"
           />
         </div>
       </section>
 
-      <section className="gallery" id="galeria">
-        <p className="section-label">Galería</p>
-        <h2>Nuestros platillos</h2>
+      <section className="services" id="servicios">
+        <p className="section-label">Servicios</p>
+        <h2>Qué incluye tu página</h2>
 
-        <div className="gallery-grid">
-          <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800&auto=format&fit=crop" />
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=800&auto=format&fit=crop" />
-          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=800&auto=format&fit=crop" />
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop" />
+        <div className="service-grid">
+          <Service title="Diseño responsive" text="Tu página se verá bien en celular, tablet y computadora." />
+          <Service title="WhatsApp integrado" text="Botones directos para que tus clientes te contacten rápido." />
+          <Service title="Google Maps" text="Ubicación visible para que puedan llegar fácilmente a tu negocio." />
+          <Service title="Hosting 24/7" text="La página queda publicada en internet aunque tu computadora esté apagada." />
+          <Service title="Dominio propio" text="Te ayudo a conectar un dominio como tunegocio.com." />
+          <Service title="Actualizaciones" text="Puedo cambiar horarios, precios, promociones o imágenes cuando lo necesites." />
         </div>
       </section>
 
-      <section className="reviews">
-        <p className="section-label">Opiniones</p>
-        <h2>Clientes felices</h2>
+      <section className="pricing" id="precios">
+        <p className="section-label">Precios</p>
+        <h2>Paquetes iniciales</h2>
 
-        <div className="review-grid">
-          <Review text="Excelente sabor y muy buena atención." name="Juan Pérez" />
-          <Review text="La mejor hamburguesa de la zona." name="María López" />
-          <Review text="Rápido, rico y buen precio." name="Carlos Medina" />
+        <div className="pricing-grid">
+          <Plan
+            name="Básico"
+            price="$2,500"
+            items={[
+              "Landing page sencilla",
+              "WhatsApp",
+              "Google Maps",
+              "Diseño adaptable a celular",
+            ]}
+          />
+          <Plan
+            name="Profesional"
+            price="$4,500"
+            featured
+            items={[
+              "Diseño más completo",
+              "Galería de imágenes",
+              "Menú o servicios",
+              "Dominio conectado",
+              "SEO básico",
+            ]}
+          />
+          <Plan
+            name="Premium"
+            price="$7,000"
+            items={[
+              "Página personalizada",
+              "Copywriting básico",
+              "Más secciones",
+              "Soporte inicial",
+              "Optimización visual",
+            ]}
+          />
         </div>
-      </section>
-
-      <section className="location" id="ubicacion">
-        <div>
-          <p className="section-label">Ubicación</p>
-          <h2>Ven a visitarnos</h2>
-          <p>Estamos listos para atenderte o preparar tu pedido para llevar.</p>
-          <a href="https://maps.google.com" target="_blank">Abrir en Google Maps</a>
-        </div>
-
-        <iframe
-          title="Mapa"
-          src="https://www.google.com/maps?q=Guadalajara,Jalisco&output=embed"
-          loading="lazy"
-        ></iframe>
       </section>
 
       <section className="cta">
-        <h2>¿Se te antojó?</h2>
-        <p>Haz tu pedido por WhatsApp y lo preparamos para ti.</p>
-        <a href={whatsapp} target="_blank">Ordenar ahora</a>
+        <h2>¿Quieres una página para tu negocio?</h2>
+        <p>
+          Mándame mensaje y te muestro cómo podría verse tu negocio en internet.
+        </p>
+        <a href={whatsapp} target="_blank">Cotizar por WhatsApp</a>
       </section>
 
       <footer>
-        <h3>Sabor Local</h3>
-        <p>Comida deliciosa, rápida y hecha con cariño.</p>
-        <p>© 2026 Sabor Local. Todos los derechos reservados.</p>
+        <h3>Héctor Web Studio</h3>
+        <p>Diseño web para negocios locales.</p>
+        <p>© 2026 Héctor Romero. Todos los derechos reservados.</p>
       </footer>
 
-      <a className="whatsapp" href={whatsapp} target="_blank">
-        💬
-      </a>
+      <a className="whatsapp" href={whatsapp} target="_blank">💬</a>
     </div>
   );
 }
 
-function FoodCard({ img, title, desc, price }) {
+function Project({ title, category, text, link }) {
   return (
-    <div className="food-card">
-      <img src={img} />
-      <div>
-        <h3>{title}</h3>
-        <p>{desc}</p>
-        <span>{price}</span>
-      </div>
+    <div className="project-card">
+      <span>{category}</span>
+      <h3>{title}</h3>
+      <p>{text}</p>
+      <a href={link} target="_blank">Ver demo</a>
     </div>
   );
 }
 
-function Review({ text, name }) {
+function Service({ title, text }) {
   return (
-    <div className="review">
-      <div>⭐⭐⭐⭐⭐</div>
-      <p>“{text}”</p>
-      <strong>- {name}</strong>
+    <div className="service-card">
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+  );
+}
+
+function Plan({ name, price, items, featured }) {
+  return (
+    <div className={featured ? "plan featured" : "plan"}>
+      {featured && <span className="badge">Más recomendado</span>}
+      <h3>{name}</h3>
+      <h4>{price} MXN</h4>
+      <ul>
+        {items.map((item) => (
+          <li key={item}>✓ {item}</li>
+        ))}
+      </ul>
     </div>
   );
 }
