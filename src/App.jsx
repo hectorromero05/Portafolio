@@ -18,7 +18,7 @@ export default function App() {
       <header className="hero">
         <div className="hero-content">
           <span>Páginas web para negocios locales</span>
-          <h1>Diseño páginas modernas para que tu negocio venda más</h1>
+          <h1>Obtén tu propia página para incrementar tus ventas</h1>
           <p>
             Landing pages rápidas, profesionales y adaptadas a celular para
             gimnasios, restaurantes, cafeterías, consultorios y negocios locales.
